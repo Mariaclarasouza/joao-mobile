@@ -1,11 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -13,5 +5,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-input [readonly]="true" label="Senha: " [(ngModel)]="inputNovaSenha"></ion-input>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="senhasService.somaGeral()">Senha Geral</ion-button>
+      <ion-button expand="block" (click)="senhasService.somaPrior()">Senha Prioritária</ion-button>
+      <ion-button expand="block" (click)="senhasService.somaExame()">Senha Exame</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  
